@@ -1,0 +1,33 @@
+{
+  "name": "blank-package",
+  "version": "1.0.0",
+  "description": "Npm TypeScript Package Boilerplate",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "keywords": ["Blank Package", "Boilerplate"],
+  "author": "Resul Takak",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "jest": "^24.5.0",
+    "prettier": "^1.16.4",
+    "ts-jest": "^24.0.0",
+    "tslint": "^5.14.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.3.3333"
+  },
+  "files": [
+    "lib/**/*"
+  ]
+}
