@@ -1,5 +1,5 @@
 {
-  "name": "blank-package",
+  "name": "npm-ts-boilerplate",
   "version": "1.0.0",
   "description": "Npm TypeScript Package Boilerplate",
   "main": "lib/index.js",
@@ -29,5 +29,9 @@
   },
   "files": [
     "lib/**/*"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r3sult/npm-ts-boilerplate.git"
+  }
 }
